@@ -1,0 +1,19 @@
+<!doctype html>
+<body>
+
+<title>News demo</title>
+
+
+
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Enter dialogue: <br>
+        <dd><textarea name=text rows=5 cols=40>{{ text }}</textarea>
+        <dd><input type=submit value="Predict genre">
+    </dl>
+</form>
+
+
+<br>Predicted genres:<br>
+{{ prediction_message }}
+</body>
